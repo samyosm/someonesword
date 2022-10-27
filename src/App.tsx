@@ -7,7 +7,7 @@ function App() {
   const [isModeSending, setIsModeSending] = useState(true);
 
   return (
-    <div className="h-full w-full flex flex-col justify-between p-10">
+    <div className="bg-[#1d2329] h-full w-full flex flex-col justify-between p-10">
       <Header />
 
       <div>
