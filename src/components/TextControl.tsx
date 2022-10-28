@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 export const TextControl = ({
   text,
@@ -15,14 +15,9 @@ export const TextControl = ({
     <textarea
       readOnly={readOnly}
       placeholder={placeholder}
-      rows={1}
-      style={{
-        height: readOnly ? "unset" : "16rem" 
-      }}
       onChange={(event) => onChange(event.target.value)}
-      className="bg-[#f7fafb] resize-none rounded-2xl p-5 outline-none text-[#1d2329]"
-    >
-      {text}
-    </textarea>
+      className="bg-[#f7fafb] h-72 resize-none rounded-2xl p-5 outline-none text-[#1d2329]"
+      defaultValue={text}
+    />
   );
 };
