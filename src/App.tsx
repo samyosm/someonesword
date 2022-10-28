@@ -9,11 +9,13 @@ import Recieving from "./components/Recieving";
 
 function App() {
   const [isModeSending, setIsModeSending] = useState(false);
-  const handleGetWordPress = async () => {};
 
-  const handleSendWordPress = () => {};
+  const handleGetWordPress = () => { setIsModeSending(false) };
+  const handleSendWordPress = () => { setIsModeSending(true) };
+
   return (
-    <div className="bg-[#1d2329] h-full w-full flex flex-col justify-between p-10">
+    <div className='bg-[#1d2329] w-full h-full'>
+      <div className=" h-full w-full flex flex-col justify-between p-10 max-w-lg mx-auto">
       <Header />
 
       {isModeSending ? (
@@ -22,6 +24,8 @@ function App() {
         <Recieving handleSendWordPress={handleSendWordPress} />
       )}
     </div>
+    </div>
+    
   );
 }
 
